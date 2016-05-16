@@ -61,19 +61,21 @@
                                             <i class="material-icons">help_outline</i>
                                               <img class="user-ico" src="img/user.png" alt="utilisateur">
                                         </div>
-                                </div>
+                                </div> <!-- -navbar-header -->
                         </nav>
 
-
+            <!-- background gris-clair-->
+            <div class="bckgrnd-title" >
+                </div>
 
     <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                        <em>Rechercher un utilisateur...</em>
+                        <i class="fa fa-search" aria-hidden="true"></i> <em><small>Rechercher un utilisateur...</small></em>
                 </li>
-                <li class="sidebar-title">
+                <li class="sidebar-subtitle">
                     UTILISATEURS
                 </li>
                         <li>
@@ -83,12 +85,12 @@
                         </li>
                         <li>
                             <label class="checkbox">
-                                    <input type="checkbox" value="">Admin
+                                    <input type="checkbox" value="" checked>Admin
                             </label>
                         </li>
                         <li>
                             <label class="checkbox">
-                                    <input type="checkbox" value="" checked>Device Black-listés
+                                    <input type="checkbox" value="" checked>Devices Black-listés
                             </label>
                         </li>
                         <li>
@@ -96,10 +98,10 @@
                                     <input type="checkbox" value="" checked>Date de dernière connexion
                             </label>
                         </li>                            
-                <li class="sidebar-title">
+                <li class="sidebar-subtitle">
                     DERNIERE CONNEXION
                 </li>
-                <li class="sidebar-title">
+                <li class="sidebar-subtitle">
                     SYSTEME D'EXPLOITATION
                 </li>
                     <li>
@@ -123,22 +125,26 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+    
+                    <div class="main-title">
+                        <h3><strong>UTILISATEURS</strong> (368) </h3>
+                                    <div class="buttons">
+                                        <a href="#" class="btn btn-default">IMPORT USERS</a>
+                                        <a href="#" class="btn btn-success">ADD A USER</a>
+                                </div>
+                        </div>
+
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2><strong>UTILISATEURS</strong> (368) </h2>
-                        <a href="#" class="btn btn-default">IMPORT</a>
-                        <a href="#" class="btn btn-success">ADD A USER</a>
-                                
+                <br>
                                 <table class="table table-hover" >
                                   <thead>
                                     <tr>
                                       <th>#</th>
-                                      <th>Prénom</th>
-                                      <th >Nom</th>
-                                      <th>Adresse e-mail</th>
-                                      <th>Dernière connexion</th>
-                                      <th>Admin</th>
+                                      <th>Prénom  <i class="material-icons">keyboard_arrow_down</i></th>
+                                      <th >Nom  <i class="material-icons">keyboard_arrow_down</i></th>
+                                      <th>Adresse e-mail  <i class="material-icons">keyboard_arrow_down</i></th>
+                                      <th>Dernière connexion  <i class="material-icons">keyboard_arrow_down</i></th>
+                                      <th>Admin  <i class="material-icons">keyboard_arrow_down</i></th>
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -148,7 +154,7 @@
                                       <td>Bonomi</td>
                                       <td>jean.michel.bonomi@toto.com</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>
+                                      <td><i class="fa fa-check fa-lg " aria-hidden="true"></td>
                                     </tr>
                                 <tr>
                                       <td>  <input type="checkbox"></td>
@@ -156,7 +162,7 @@
                                       <td>Leymarie</td>
                                       <td>patleym@abc.com</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>
+                                      <td></td>
                                 </tr>
 
                                 <tr>
@@ -165,7 +171,8 @@
                                       <td>Cudennec</td>
                                       <td>kevincdnc@hotmail.ru</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>                                    
+                                      <td><i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                                </td>                                    
                                 </tr>
 
                                 <tr>
@@ -174,7 +181,7 @@
                                       <td>Roussel</td>
                                       <td>Tommyroussel@aol.com</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>                                    
+                                      <td></td>                                    
                                 </tr>
 
                                 <tr>
@@ -183,7 +190,7 @@
                                       <td>Tantardini</td>
                                       <td>Vince.t@alibaba.com</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>                                    
+                                      <td></td>                                    
                                 </tr>
 
                                 <tr>
@@ -192,19 +199,12 @@
                                       <td>Fereira Da Costa</td>
                                       <td>Carlos-fereira@rubocop.com</td>
                                       <td>Column content</td>
-                                      <td>Column content</td>                                    
+                                      <td></td>                                    
                                 </tr>
                                   </tbody>
                                 </table> 
+                        
 
-
-
-
-
-
-
-                    </div>
-                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
