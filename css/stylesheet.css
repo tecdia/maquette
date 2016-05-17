@@ -1,7 +1,9 @@
 body {
     padding-top: 70px;
 }
-
+th {
+    cursor: pointer;
+}
 /*  = = = = =  Barre de navigation orange = = = = = */
 .navbar {
         background-color: #FF8900;
@@ -113,7 +115,7 @@ align-items: center;
         font-weight: bold;
         border-radius: 4px;
         border: none;
-        outline: none;
+        outline: none  !important;
         margin-right: 1.5rem;
 }
 

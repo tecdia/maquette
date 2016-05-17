@@ -94,19 +94,30 @@
 }
 
 
+.last-cnx {
+background-color: #4A4A4A;
+padding-bottom: 2.9rem;
+}
+
+
+/* - - -  Titres de la sidebar - - - */
 .sidebar-subtitle {
     color:#9A9A9A !important; /*  sinon la Bootstrap impose sa couleur */
     padding-top: 3.5%;
 }
 
-.checkbox  {
-    color:#AFAFAF;
-    font-weight: 400;
-    font-size: 1em;
-   text-indent: 12%;
-    /*display: inline;*/
+/*  Entre le Et le */
+.sidebar-subtitle em {
+    margin-left: 3rem;
 }
 
+/*  choix de dates */
+.calendar {
+    color:#FFFFFF;
+    font-size: medium;
+    margin-left: 20px;
+    border-bottom: 1px solid#9A9A9A;
+}
 
 @media(min-width:768px) {
     #wrapper {

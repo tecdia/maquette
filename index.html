@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.min.css">
     <!--  Google Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/checkbox.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,28 +80,41 @@
                 <li class="sidebar-subtitle">
                     UTILISATEURS
                 </li>
-                        <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="" checked>Tous
-                            </label>
+                        <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="checkbox-custom" checked/>
+                                            <label for="checkbox-custom"></label>
+                                </div>
+                                <span class="item-txt">Tous</span>
+                        </li>
+                        <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
+                                            <label for="checkbox-custom"></label>
+                                </div>
+                                <span class="item-txt">Admin</span>
                         </li>
                         <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="" checked>Admin
-                            </label>
+                            <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
+                                            <label for="checkbox-custom"></label>
+                                </div>                          
+                                   <span class="item-txt">Devices Black-listés</span>
                         </li>
                         <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="" checked>Devices Black-listés
-                            </label>
+                           <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
+                                            <label for="checkbox-custom"></label>
+                                </div>                           
+                                    <span class="item-txt">Date de dernière connexion</span>
                         </li>
-                        <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="" checked>Date de dernière connexion
-                            </label>
-                        </li>                            
-                <li class="sidebar-subtitle">
-                    DERNIERE CONNEXION
+                        <br><br>
+                <li class="sidebar-subtitle last-cnx">
+                    DERNIERE CONNEXION<br>
+                    <em>Entre le</em> <i class="fa fa-calendar" aria-hidden="true"></i><span class="calendar">17 janvier 2015</span><i class="material-icons">keyboard_arrow_down</i><br>
+                    <em>Et le &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><i class="fa fa-calendar" aria-hidden="true"></i><span class="calendar">18 janvier 2016</span><i class="material-icons">keyboard_arrow_down</i><br>
                 </li>
                 <li class="sidebar-subtitle">
                     SYSTEME D'EXPLOITATION
@@ -129,8 +144,8 @@
                     <div class="main-title">
                         <h3><strong>UTILISATEURS</strong> (368) </h3>
                                     <div class="buttons">
-                                        <a href="#" class="btn btn-default">IMPORT USERS</a>
-                                        <a href="#" class="btn btn-success">ADD A USER</a>
+                                        <a href="#" class="btn btn-default"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;&nbsp;IMPORT USERS</a>
+                                        <a href="#" class="btn btn-success"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp;ADD A USER</a>
                                 </div>
                         </div>
 
@@ -139,7 +154,7 @@
                                 <table class="table table-hover" >
                                   <thead>
                                     <tr>
-                                      <th>#</th>
+                                      <th></th>
                                       <th>Prénom  <i class="material-icons">keyboard_arrow_down</i></th>
                                       <th >Nom  <i class="material-icons">keyboard_arrow_down</i></th>
                                       <th>Adresse e-mail  <i class="material-icons">keyboard_arrow_down</i></th>
@@ -153,7 +168,7 @@
                                       <td>Jean michel</td>
                                       <td>Bonomi</td>
                                       <td>jean.michel.bonomi@toto.com</td>
-                                      <td>Column content</td>
+                                      <td>17 novembre 2015 <span class="time-txt">09:00 AM</span></td>
                                       <td><i class="fa fa-check fa-lg " aria-hidden="true"></td>
                                     </tr>
                                 <tr>
@@ -161,7 +176,7 @@
                                       <td>Patrice</td>
                                       <td>Leymarie</td>
                                       <td>patleym@abc.com</td>
-                                      <td>Column content</td>
+                                      <td>17 novembre 2015 <span class="time-txt">08:59 AM</span></td>
                                       <td></td>
                                 </tr>
 
@@ -170,7 +185,7 @@
                                       <td>Kevin</td>
                                       <td>Cudennec</td>
                                       <td>kevincdnc@hotmail.ru</td>
-                                      <td>Column content</td>
+                                      <td>13 novembre 2015 <span class="time-txt">14:30 PM</span></td>
                                       <td><i class="fa fa-check fa-lg" aria-hidden="true"></i>
                                 </td>                                    
                                 </tr>
@@ -180,7 +195,7 @@
                                       <td>Tommy</td>
                                       <td>Roussel</td>
                                       <td>Tommyroussel@aol.com</td>
-                                      <td>Column content</td>
+                                      <td>13 novembre 2015 <span class="time-txt">14:29</span></td>
                                       <td></td>                                    
                                 </tr>
 
@@ -189,7 +204,7 @@
                                       <td>Vincent</td>
                                       <td>Tantardini</td>
                                       <td>Vince.t@alibaba.com</td>
-                                      <td>Column content</td>
+                                      <td>13 novembre 2015      <span class="time-txt">14:29</span></td>
                                       <td></td>                                    
                                 </tr>
 
@@ -198,7 +213,7 @@
                                       <td>Carlos</td>
                                       <td>Fereira Da Costa</td>
                                       <td>Carlos-fereira@rubocop.com</td>
-                                      <td>Column content</td>
+                                      <td>13 novembre 2015 <span class="time-txt">14:29</span></td>
                                       <td></td>                                    
                                 </tr>
                                   </tbody>
