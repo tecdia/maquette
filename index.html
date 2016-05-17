@@ -13,8 +13,8 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.min.css">
 	
-	    <!-- dataTable -->
-	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
+    <!-- dataTable -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
     
     <!--  Google Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/checkbox.css">
+    <script src="js/angular/angular.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +32,7 @@
     <![endif]-->
   </head>
 
-<body>
+<body  ng-app>
                     <!-- Navigation -->
                         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -80,7 +81,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand" >
                         <!--  <em><small>Rechercher un utilisateur...</small></em> -->
-             <i class="fa fa-search" aria-hidden="true"></i> <input type="search" placeholder="Rechercher un utilisateur..." aria-controls="myTable" onfocus="this.placeholder=''" >
+             <i class="fa fa-search" aria-hidden="true"></i> <input type="search" placeholder="Rechercher un utilisateur..." ng-model="query"  onfocus="this.placeholder=''" />
                 </li>
                 <li class="sidebar-subtitle">
                     UTILISATEURS
@@ -162,6 +163,14 @@
 
             <div class="container-fluid">
                 <br>
+
+	<div ng-init="users=[{firstname:'Jean-Michel', lastname:'Bonomi',email:'jean.michel.bonomi@toto.com',lastcnx:'17 novembre 2015 09:00 AM',status:true},
+	{firstname:'Patrice', lastname:'Leymarie',email:'patleym@abc.com',lastcnx:'17 novembre 2015 08:59 AM',status:false}, 
+	{firstname:'Kevin', lastname:'Cudennec',email:'kevincdnc@hotmail.ru',lastcnx:'13 novembre 2015 14:30 PM',status:true},
+	{firstname:'Tommy', lastname:'Roussel',email:'Tommyroussel@aol.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
+	{firstname:'Vincent',lastname:'Tantardini',email:'Vince.t@alibaba.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
+	{firstname:'Carlos',lastname:'Fereira Da Costa',email:'Carlos-fereira@rubocop.com',lastcnx:'13 novembre 2015 14:29 PM',status:false}]">
+
                                 <table class="table table-hover" id="myTable">
                                   <thead>
                                     <tr>
@@ -173,64 +182,18 @@
                                       <th>Admin  <i class="material-icons">keyboard_arrow_down</i></th>
                                     </tr>
                                   </thead>
+
                                   <tbody>
-                                    <tr>
-                                      <td><input type="checkbox"></td>
-                                      <td>Jean michel</td>
-                                      <td>Bonomi</td>
-                                      <td>jean.michel.bonomi@toto.com</td>
-                                      <td>17 novembre 2015 <span class="time-txt">09:00 AM</span></td>
-                                      <td><i class="fa fa-check fa-lg " aria-hidden="true"></td>
+                                    <tr ng-repeat="user in users | filter:query">
+                                     		<td>  <input type="checkbox"></td>
+				<td>{{user.firstname}}</td>
+				<td>{{user.lastname}}</td>
+				<td>{{user.email}}</td>
+				<td>{{user.lastcnx}}</td>
+				<td>{{user.status}}</td>
                                     </tr>
-                                <tr>
-                                      <td>  <input type="checkbox"></td>
-                                      <td>Patrice</td>
-                                      <td>Leymarie</td>
-                                      <td>patleym@abc.com</td>
-                                      <td>17 novembre 2015 <span class="time-txt">08:59 AM</span></td>
-                                      <td></td>
-                                </tr>
-
-                                <tr>
-                                      <td>  <input type="checkbox"></td>
-                                      <td>Kevin</td>
-                                      <td>Cudennec</td>
-                                      <td>kevincdnc@hotmail.ru</td>
-                                      <td>13 novembre 2015 <span class="time-txt">14:30 PM</span></td>
-                                      <td><i class="fa fa-check fa-lg" aria-hidden="true"></i>
-                                </td>                                    
-                                </tr>
-
-                                <tr>
-                                      <td>  <input type="checkbox"></td>
-                                      <td>Tommy</td>
-                                      <td>Roussel</td>
-                                      <td>Tommyroussel@aol.com</td>
-                                      <td>13 novembre 2015 <span class="time-txt">14:29 PM</span></td>
-                                      <td></td>                                    
-                                </tr>
-
-                                <tr>
-                                      <td>  <input type="checkbox"></td>
-                                      <td>Vincent</td>
-                                      <td>Tantardini</td>
-                                      <td>Vince.t@alibaba.com</td>
-                                      <td>13 novembre 2015      <span class="time-txt">14:29 PM</span></td>
-                                      <td></td>                                    
-                                </tr>
-
-                                <tr>
-                                      <td>  <input type="checkbox"></td>
-                                      <td>Carlos</td>
-                                      <td>Fereira Da Costa</td>
-                                      <td>Carlos-fereira@rubocop.com</td>
-                                      <td>13 novembre 2015 <span class="time-txt">14:29 PM</span></td>
-                                      <td></td>                                    
-                                </tr>
-                                  </tbody>
-                                </table> 
-                        
-
+                                </tbody>
+                                 </table> 
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -253,6 +216,7 @@
 		});
 	</script>
 
+	<script src="js/test.js"></script>
 </body>
 
 </html>
