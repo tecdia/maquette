@@ -1,6 +1,7 @@
 # page user
 made with love :blush:
-résultat final [ici](https://tecdia.github.io/maquette/)
+
+Résultat final **[ici](https://tecdia.github.io/maquette/)**
 
 Maquette à reproduire :
 ![@reproduire](page_user.png)
