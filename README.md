@@ -28,3 +28,11 @@ pas de JS intégré
 ![WIP - 98%](14h51.png)
 - un peu d'angular ajouté : recherche par utilisateurs affichés OK
 - icône verte du statut admin NOK
+- 
+@16h40
+- icône verte statut admin OK.
+
+##### CONCLUSION :
+je n'ai pas fini d'améliorer. 
+La résolution de ma machine est élevée, bien que je l'ai diminuée, il est probable que d'un ordi à un autre l'affichage varie.
+Merci de m'avoir donné cet exercice sympa. N'hésitez à m'en envoyer d'autres ou à me donner des conseils.
