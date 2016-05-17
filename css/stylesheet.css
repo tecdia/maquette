@@ -1,9 +1,18 @@
 body {
     padding-top: 70px;
 }
+
 th {
     cursor: pointer;
+    outline: none;
 }
+
+/*  , #myTable_filter*/
+#myTable_info, #myTable_paginate,   #myTable_length, .dataTables_filter {   
+    display:none;
+}
+
+
 /*  = = = = =  Barre de navigation orange = = = = = */
 .navbar {
         background-color: #FF8900;

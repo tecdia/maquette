@@ -88,10 +88,39 @@
 /*  mes ajouts */
 .sidebar-brand {
     height: 13%;
-    padding-top: 9%;
+    /*padding-top: 9%;*/
     background-color: #333333;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center
 }
+
+.sidebar-brand input[type="search"] {
+  display: block;
+  height: 98%;
+  margin: 0;
+  width: 75%;
+  background-color: #333333;
+  font-size: 1em;
+  font-style: italic;
+  color: gray;
+  
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  padding: 8%;
+}
+
+.sidebar-brand input[type="search"]:focus {
+  outline: none;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
 
 
 .last-cnx {
