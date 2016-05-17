@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap-3.3.6/css/bootstrap.min.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.min.css">
+	
+	    <!-- dataTable -->
+	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
+    
     <!--  Google Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -74,39 +78,40 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                        <i class="fa fa-search" aria-hidden="true"></i> <em><small>Rechercher un utilisateur...</small></em>
+                <li class="sidebar-brand" >
+                        <!--  <em><small>Rechercher un utilisateur...</small></em> -->
+             <i class="fa fa-search" aria-hidden="true"></i> <input type="search" placeholder="Rechercher un utilisateur..." aria-controls="myTable" onfocus="this.placeholder=''" >
                 </li>
                 <li class="sidebar-subtitle">
                     UTILISATEURS
                 </li>
                         <li class="item">
                                 <div class="checkbox-custom">
-                                            <input type="checkbox" value="None" id="checkbox-custom" checked/>
-                                            <label for="checkbox-custom"></label>
+                                            <input type="checkbox" value="None" id="one" class="checkbox-custom" checked/>
+                                             <label for="one"></label> 
                                 </div>
                                 <span class="item-txt">Tous</span>
                         </li>
                         <li class="item">
                                 <div class="checkbox-custom">
-                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
-                                            <label for="checkbox-custom"></label>
+                                            <input type="checkbox" value="None" id="two" class="checkbox-custom" checked/>
+                                            <label for="two"></label>
                                 </div>
                                 <span class="item-txt">Admin</span>
                         </li>
                         <li>
                             <li class="item">
                                 <div class="checkbox-custom">
-                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
-                                            <label for="checkbox-custom"></label>
+                                            <input type="checkbox" value="None" id="three" class="checkbox-custom" checked />
+                                            <label for="three"></label>
                                 </div>                          
                                    <span class="item-txt">Devices Black-listés</span>
-                        </li>
+                        </li> 
                         <li>
                            <li class="item">
                                 <div class="checkbox-custom">
-                                            <input type="checkbox" value="None" id="checkbox-custom" checked />
-                                            <label for="checkbox-custom"></label>
+                                            <input type="checkbox" value="None" id="four" class="checkbox-custom" checked />
+                                            <label for="four"></label>
                                 </div>                           
                                     <span class="item-txt">Date de dernière connexion</span>
                         </li>
@@ -119,21 +124,27 @@
                 <li class="sidebar-subtitle">
                     SYSTEME D'EXPLOITATION
                 </li>
-                    <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="">Android
-                            </label>
+                        <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="os1" class="checkbox-custom" checked/>
+                                             <label for="os1"></label> 
+                                </div>
+                                <span class="item-txt">Android</span>
                         </li>
-                        <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="">iOS
-                            </label>
+                        <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="os2" class="checkbox-custom" checked/>
+                                             <label for="os2"></label> 
+                                </div>
+                                <span class="item-txt">iOS</span>
                         </li>
-                        <li>
-                            <label class="checkbox">
-                                    <input type="checkbox" value="">Windows Phone
-                            </label>
-                        </li>                
+                        <li class="item">
+                                <div class="checkbox-custom">
+                                            <input type="checkbox" value="None" id="os3" class="checkbox-custom" checked/>
+                                             <label for="os3"></label> 
+                                </div>
+                                <span class="item-txt">Windows Phone</span>
+                        </li>         
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -151,12 +162,12 @@
 
             <div class="container-fluid">
                 <br>
-                                <table class="table table-hover" >
+                                <table class="table table-hover" id="myTable">
                                   <thead>
                                     <tr>
                                       <th></th>
                                       <th>Prénom  <i class="material-icons">keyboard_arrow_down</i></th>
-                                      <th >Nom  <i class="material-icons">keyboard_arrow_down</i></th>
+                                      <th>Nom  <i class="material-icons">keyboard_arrow_down</i></th>
                                       <th>Adresse e-mail  <i class="material-icons">keyboard_arrow_down</i></th>
                                       <th>Dernière connexion  <i class="material-icons">keyboard_arrow_down</i></th>
                                       <th>Admin  <i class="material-icons">keyboard_arrow_down</i></th>
@@ -228,9 +239,19 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->    
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery/jquery-1.12.3.min.js"></script>
+    
+    <!-- DataTable plugin jQuery JS -->    
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+     <!-- Bootstrap Core JavaScript -->    
+    <script src="/css/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+    			$('#myTable').DataTable();
+		});
+	</script>
 
 </body>
 
