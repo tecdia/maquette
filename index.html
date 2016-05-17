@@ -32,7 +32,7 @@
     <![endif]-->
   </head>
 
-<body  ng-app>
+<body  ng-app="myApp">
                     <!-- Navigation -->
                         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -161,16 +161,8 @@
                                 </div>
                         </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid" ng-controller="myController">
                 <br>
-
-	<div ng-init="users=[{firstname:'Jean-Michel', lastname:'Bonomi',email:'jean.michel.bonomi@toto.com',lastcnx:'17 novembre 2015 09:00 AM',status:true},
-	{firstname:'Patrice', lastname:'Leymarie',email:'patleym@abc.com',lastcnx:'17 novembre 2015 08:59 AM',status:false}, 
-	{firstname:'Kevin', lastname:'Cudennec',email:'kevincdnc@hotmail.ru',lastcnx:'13 novembre 2015 14:30 PM',status:true},
-	{firstname:'Tommy', lastname:'Roussel',email:'Tommyroussel@aol.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
-	{firstname:'Vincent',lastname:'Tantardini',email:'Vince.t@alibaba.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
-	{firstname:'Carlos',lastname:'Fereira Da Costa',email:'Carlos-fereira@rubocop.com',lastcnx:'13 novembre 2015 14:29 PM',status:false}]">
-
                                 <table class="table table-hover" id="myTable">
                                   <thead>
                                     <tr>
@@ -190,7 +182,7 @@
 				<td>{{user.lastname}}</td>
 				<td>{{user.email}}</td>
 				<td>{{user.lastcnx}}</td>
-				<td>{{user.status}}</td>
+				<td><i ng-show="{{user.status}}" class="fa fa-check fa-lg" aria-hidden="true"></td>
                                     </tr>
                                 </tbody>
                                  </table> 
@@ -210,13 +202,28 @@
      <!-- Bootstrap Core JavaScript -->    
     <script src="/css/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 	
+
+	<!-- plugin dataTable, pour le tri des colonnes du tableau -->
 	<script>
 		$(document).ready(function(){
-    			$('#myTable').DataTable();
+   			$('#myTable').DataTable();
 		});
 	</script>
 
-	<script src="js/test.js"></script>
-</body>
 
+	<!--  petite application angular pour le filtre sur l'input et sur le statut admin des utilisateurs  -->
+	<script>
+		var app = angular.module('myApp', []);
+
+		app.controller('myController', function ($scope) {
+		$scope.users = [{firstname:'Jean-Michel', lastname:'Bonomi',email:'jean.michel.bonomi@toto.com',lastcnx:'17 novembre 2015 09:00 AM',status:true},
+			{firstname:'Patrice', lastname:'Leymarie',email:'patleym@abc.com',lastcnx:'17 novembre 2015 08:59 AM',status:false}, 
+			{firstname:'Kevin', lastname:'Cudennec',email:'kevincdnc@hotmail.ru',lastcnx:'13 novembre 2015 14:30 PM',status:true},
+			{firstname:'Tommy', lastname:'Roussel',email:'Tommyroussel@aol.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
+			{firstname:'Vincent',lastname:'Tantardini',email:'Vince.t@alibaba.com',lastcnx:'13 novembre 2015 14:29 PM',status:false},
+			{firstname:'Carlos',lastname:'Fereira Da Costa',email:'Carlos-fereira@rubocop.com',lastcnx:'13 novembre 2015 14:29 PM',status:false}];
+		});
+	</script>
+	
+</body>
 </html>
