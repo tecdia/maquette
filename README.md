@@ -28,7 +28,7 @@ pas de JS intégré
 ![WIP - 98%](14h51.png)
 - un peu d'angular ajouté : recherche par utilisateurs affichés OK
 - icône verte du statut admin NOK
-- 
+
 @16h40
 - icône verte statut admin OK.
 
