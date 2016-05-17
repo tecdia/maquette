@@ -19,6 +19,6 @@ Maquette à reproduire :
 
 pas de JS intégré
 
-#### mardi 17 mai modifs ajoutées :
+#### mardi 17 mai : modifs ajoutées :
 - plugin dataTable jQuery pour trier le tableau
 - input ajoutée dans le panel de gauche (fail sur le filtre des données via datatable)
